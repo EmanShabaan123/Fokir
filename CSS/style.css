@@ -382,7 +382,8 @@ header a.shape::before{
     transition-delay: 1s;
 }
 #Portfolio .content .card .item a{
-    width: 37%;
+    text-align: center;
+    width: 35%;
     bottom: -70px;
     left: 50%;
     transform: translate(-50%);
@@ -391,7 +392,7 @@ header a.shape::before{
     padding: 10px 10px;
     border-radius: 10px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 13px;
 }
 #Portfolio .content .card .item:hover a{
      bottom: 15px;
