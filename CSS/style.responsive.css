@@ -1,0 +1,406 @@
+@media (max-width: 1300px) {
+    nav .container .logo{
+           width: 15%;
+        }
+    nav .container .links .box{
+           display: block;
+           width: 35px;
+           height: 35px;
+           background-color: transparent;
+           border: 1.2px solid var(--main-color);
+           border-radius: 5px; 
+           display: flex ;
+           flex-direction: column;
+           justify-content: space-evenly;
+           align-items: center;
+        }
+    nav .container .links .box span{
+          display: block;
+          width: 75%;
+          height: 1px;
+          background-color: var(--main-color);
+        }
+    nav .container .links ul{
+           position: fixed;
+           top: 60px;
+           background-color: #333;
+           left: 50%;
+           width: 85%;
+           flex-direction: column;
+           transform: translateX(-50%);
+           text-align: center;
+           padding: 0;
+           border-radius: 15px;
+           height: 0px;
+           overflow: hidden;
+           transition-duration: 1s;
+        }
+    nav .container .links .box:focus + ul{
+            height: 250px;
+            padding: 20px 10px;
+        }
+    nav .container .links ul li:not(:last-child){
+            margin-right: 0px;
+            margin-bottom: 15px;
+        }
+    nav .container .links ul li {
+            width: fit-content;
+            left: 50%;
+            transform: translate(-50%);
+        }
+    #About .container .part1 .frame .image .layout ul li a{
+          width: 30px;
+          height: 30px;
+        }
+    #About .container .part2 p{
+            line-height: 20px;
+            font-size: 14px;
+        }
+    #About .container{
+             flex-wrap: wrap;
+        }
+    #About .container .part1 .frame{
+            width: 260px;
+            margin-bottom: 30px;
+        }
+    #About .container .part1 ,
+    #About .container .part2
+        {   
+            flex-basis: 100%;
+        }
+    #About .container .part2 .info .columns{
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    #About .container .part2 .but1{
+            margin-bottom: 10px;
+        }
+    #Services .content .card {
+           flex-basis: 100%;
+           margin: auto;
+        }
+    #Services .content .card:not(:last-child){
+                margin-bottom: 25px;
+        }
+    #Portfolio .content .card{
+    width: 100%;
+        }
+    #Portfolio .content .card .item h2{
+    font-size: 15px;
+        }
+    #Portfolio .content .card .item a{
+    font-size: 10px;
+    width: 45%;
+    text-align: center;
+        }
+    #Blog .container {
+    flex-wrap: wrap;
+        }
+    #Blog .container .columns {
+      flex-basis: 250px; 
+      margin: auto;
+        }
+    #Blog .container .columns:not(:last-child){
+     margin-bottom: 15px;
+       }
+    #Blog .container .columns .item{
+     width: 100%;
+       }
+    #Blog .container .columns .item h3{
+    font-size: 17px;
+       }
+    #Blog .container .columns .item .body p{
+    font-size: 15px;
+    line-height: 17px;
+       }
+    #Blog .container .columns .item .body > *:not(:last-child){
+    margin-bottom: 8px;
+       }
+
+    #Contact_Us .container .columns1{
+    flex-basis: 250px;
+       }
+    #Contact_Us .container .columns1 input{
+    width: 100%;
+    padding: 10px;
+    height: 30px;
+    border-radius: 5px;
+       }
+    #Contact_Us .container .columns2{
+    flex-basis: 250px;
+       } 
+    #Contact_Us .container .columns2 input ,
+    #Contact_Us .container .columns2 textarea{
+    width: 100%;
+    padding: 10px;
+    height: 30px;
+    border-radius: 5px;
+       }
+    #Contact_Us .container form .but{
+    width: 250px;
+   
+       }
+    #Contact_Us .container form button{
+    width: 140px;
+    height: 35px;
+    margin-left: 0%;
+    font-size: 13px;
+       }
+    footer p{
+    font-size: 12px;
+       }
+
+}
+@media (min-width: 371px) and (max-width: 1300px) {
+  
+    nav .container .links ul{
+        top: 80px;
+       }
+    #About .container .part1 .frame .image .layout ul li a{
+    width: 33px;
+    height: 33px;
+ 
+       }
+    #Contact_Us .container .columns1{
+    flex-basis: 280px;
+       }
+    #Contact_Us .container .columns2{
+    flex-basis: 280px;
+       } 
+    #Contact_Us .container form .but{
+    width: 280px; 
+       }
+    footer p{
+    font-size: 13px;
+       }
+}
+@media (min-width: 577px) and (max-width: 1300px) {
+
+
+    nav .container .logo{
+           width: 10%;
+        }
+    nav .container .links ul{
+        width: 80%;
+        }
+    #About .container .part1 .frame .image .layout ul li a{
+    width: 35px;
+    height: 35px;
+ 
+        }
+    #Services .content .card {
+           flex-basis: 50%;
+        }
+    #Services .content .card{
+                margin-bottom: 25px;
+        }
+    #Portfolio .content .card{
+              width: 50%;
+        }
+    #Portfolio .content .card{
+    width: 50%;
+        }
+    #Portfolio .content .card .item h2{
+    font-size: 15px;
+        }
+    #Portfolio .content .card .item a{
+    font-size: 8px;
+    width: 50%;
+    text-align: center;
+        }
+    #Blog .container .columns {
+      flex-basis: 232px; 
+      margin: auto;
+        }
+    #Blog .container .columns .item{
+     width: 100%;
+     
+        } 
+
+    #Contact_Us .container .columns1{
+    flex-basis: 420px;
+        }
+    #Contact_Us .container .columns2{
+    flex-basis: 420px;
+        } 
+    #Contact_Us .container form .but{
+    width: 400px;  
+   
+        }
+    #Contact_Us .container form .but button{
+     margin-left: -10px;
+     font-size: 14px;
+        }
+    footer p{
+    font-size: 12px;
+        }
+}
+
+@media (min-width: 769px) and (max-width: 1300px) {
+    nav .container .links ul
+     {
+        top: 120px;
+     }
+    nav .container .links ul{
+        width: 80%;
+      }
+    #About .container .part1 .frame .image .layout ul li a{
+    width: 32px;
+    height: 32px;
+ 
+  }
+    #About .container .part1 ,
+    #About .container .part2
+         {   
+            flex-basis: 50%;
+         }
+           #About .container .part1 .frame{
+            width: 240px;
+         }
+    #About .container .part2 h3{
+    font-size: 20px;
+    padding-left: 5px;
+   }
+   #About .container .part2 p{
+    line-height: 15px;
+    font-size: 10px;
+   }
+   #About .container .part2 h4{
+    font-size: 10px;
+   }
+   #About .container .part2 .info .columns:not(:last-child ,:nth-of-type(5)){
+     margin-bottom: 5px;
+   }
+       #About .container .part2 .but1{
+              font-size: 10px;
+              height: 35px;
+              width: 110px;
+         }
+          #About .container .part2 .but2{
+              font-size: 10px;
+              height: 35px;
+              width: 90px;
+         }
+         #Portfolio .content .card .item h2{
+                font-size: 20px;
+            }
+          #Portfolio .content .card .item a{
+           font-size: 15px;
+             width: 45%;
+}
+ #Blog .container .columns {
+      flex-basis: 235px; 
+      margin: auto;
+}
+ #Blog .container .columns .item{
+     width: 100%;
+     margin-left: 15px;
+}
+
+    #Contact_Us .container .columns1{
+    flex-basis: 480px;
+}
+#Contact_Us .container .columns1 input{
+    width: 49%;
+}
+#Contact_Us .container .columns2{
+    flex-basis: 480px;
+} 
+#Contact_Us .container form .but{
+    width: 480px;   
+}
+#Contact_Us .container form .but button{
+     margin-left: 0px;
+     font-size: 14px;
+}
+footer p{
+    font-size: 14px;
+}
+
+}
+
+@media (min-width: 992px) and (max-width: 1300px) {
+               #About .container .part1 .frame .image .layout ul li a{
+    width: 35px;
+    height: 35px;
+ 
+}
+      #About .container .part1 .frame{
+            width: 280px;
+         }
+    #About .container .part2 p{
+    line-height: 20px;
+    font-size: 12px;
+   }
+   #About .container .part2 h4{
+    font-size: 12px;
+   }
+   #About .container .part2 .info{
+    display: flex;
+    flex-wrap: wrap;
+}
+#About .container .part2 .info .columns{
+    width: 50%;
+}
+#About .container .part2 .info .columns .item{
+    display: flex;
+}
+   #Services .content .card {
+           flex-basis: 25%;
+           padding: 5px 5px;
+           /* margin: 5px; */
+        }
+    #Services .content .card p{
+        font-size: 13px;
+        line-height: 15px;
+    }
+            #Portfolio .content .card{
+              width: calc(100%/3);
+}
+            #Portfolio .content .card .item h2{
+                font-size: 20px;
+            }
+          #Portfolio .content .card .item a{
+           font-size: 12px;
+             width: 45%;
+}
+#Blog .container .columns {
+      flex-basis: calc(100%/3); 
+      margin: 0px;
+}
+ #Blog .container .columns .item{
+     width: 95%;
+     margin: 0px;
+}
+#Blog .container .columns:last-child{
+      margin: 0px;
+}
+    #Contact_Us .container .columns1{
+    flex-basis: 765px;
+}
+#Contact_Us .container .columns1 input{
+    width: 49%;
+    height: 40px;
+    border-radius: 8px;
+}
+#Contact_Us .container .columns2{
+    flex-basis: 760px;
+} 
+#Contact_Us .container .columns2 input ,
+#Contact_Us .container .columns2 textarea{
+    height: 40px;
+    border-radius: 8px ;
+}
+#Contact_Us .container form .but{
+    width: 760px;
+
+}
+#Contact_Us .container form .but button{
+     font-size: 14px;
+}
+footer p{
+    font-size: 14px;
+}
+}
+
+@media (min-width: 1181px) and (max-width: 1300px) {}

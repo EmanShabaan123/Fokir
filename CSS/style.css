@@ -1,0 +1,543 @@
+nav{
+    background-color: #333;
+    padding-bottom: 5px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 500;
+    position: fixed;
+}
+nav .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .logo{
+    width: 5%;
+}
+nav .logo img{
+    width: 100%;
+}
+nav .container .links .box {
+    display: none;
+}
+nav .container .links ul {
+    display: flex;
+    list-style: none;
+}
+nav .container .links ul li:not(:last-child){
+    margin-right: 15px;
+}
+nav .container .links ul li a{
+    font-size: 18px;
+    text-decoration: none;
+    color: azure;
+    transition-duration: 0.4s;
+}
+nav .container .links ul li{
+    position: relative;
+}
+nav .container .links ul li::after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -7px;
+    width: 0%;
+    height: 3px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: var(--main-color);
+    transition-duration: 0.4s;
+}
+nav .container .links ul li:hover::after ,
+nav .container .links ul li.active::after{
+    width: 100%;
+}
+nav .container .links ul li:hover a ,
+nav .container .links ul li.active a{
+    color: var(--main-color);
+}
+/* End the navigation bar  */
+header{
+    background: url("../Photos/slider-01.jpg");
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+/* this is mean the dark background  */
+header::before{
+    content: "";
+    display: block;
+    background-color: rgba(0,0,0,0.6);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+}
+header .content{
+    text-align: center;
+    color: azure;
+    position: relative;
+}
+header .content h5{
+    font-size: clamp(1.5rem , 2.5vw , 3rem);
+
+}
+header .content h1{
+    font-size: clamp(2rem , 6vw , 5rem);
+    color: var(--main-color);
+    margin-block: 15px;
+}
+header .content p{
+     font-size: clamp(0.8rem , 2vw , 1.5rem);
+     color: azure;
+}
+header .content p::after{
+    content: " ";
+    animation-name: animation_1;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+/* this is mean the border */
+header a.shape{
+    width: 35px;
+    height: 70px;
+    border: 2px solid var(--main-color);
+    border-radius: 17px;
+    position: absolute ;
+    left: 50%;
+    bottom: 10%;
+    transform: translate(-50%);
+    overflow: hidden;
+}
+/* this mean the circle in the anchor */
+header a.shape::before{
+    content: "";
+    display: block;
+    width: 13px;
+    height: 13px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    animation-name: animation_2;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+/* End the header */
+
+/* Start setion About  */
+#About .container{
+    display: flex;
+}
+#About .container .part1{
+    flex-basis: 50%;
+}
+#About .container .part1 .frame{
+    margin: auto;
+    width: 350px;
+    border: 5px solid var(--main-color);
+    border-radius: 12px;
+   
+}
+#About .container .part1 .frame .image{
+    position: relative; 
+    overflow: hidden;
+    border-radius: 12px;
+    top: 20px;
+    left: 20px;
+}
+#About .container .part1 .frame .image img{
+    height: auto;
+    display: block;
+}
+#About .container .part1 .frame .image .layout{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 1s; 
+}
+#About .container .part1 .frame .image:hover .layout{
+    top: 0%; 
+}
+#About .container .part1 .frame .image .layout ul{
+    display: flex;
+    list-style: none;
+}
+#About .container .part1 .frame .image .layout ul li{
+    transform: translateY(-30px);
+    opacity: 0;
+    
+}
+#About .container .part1 .frame .image:hover .layout ul li{
+    transform: translateY(0px);
+    opacity: 1; 
+    transition-duration: 1s;
+    transition-delay: 1s;
+}
+#About .container .part1 .frame .image:hover .layout ul li:nth-of-type(2){
+    transition-delay: 1.3s;
+}
+
+#About .container .part1 .frame .image:hover .layout ul li:nth-of-type(3){
+    transition-delay: 1.6s;
+}
+#About .container .part1 .frame .image:hover .layout ul li:nth-of-type(4){
+    transition-delay: 1.9s;
+}
+#About .container .part1 .frame .image .layout ul li:not(:last-child){
+    margin-right: 8px;
+}
+#About .container .part1 .frame .image .layout ul li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: azure;
+}
+#About .container .part1 .frame .image .layout ul li a i{
+    width: 20px;
+}
+#About .container .layout ul li a i[class*=facebook]{
+    color: #1877f2;
+}
+#About .container .layout ul li a i[class*=instagram]{
+    color: #e4405f;
+}
+#About .container .layout ul li a i[class*=twitter]{
+    color: #1da1f2;
+}
+#About .container .layout ul li a i[class*=github]{
+    color:#131418 ;
+}
+/* End part 1 from section About */
+#About .container .part2{
+    flex-basis: 50%;
+    color: azure;
+}
+#About .container .part2>*:not(:last-child){
+    margin-bottom: 15px;
+}
+#About .container .part2 h3{
+    font-size: 35px;
+    border-left: 5px solid var(--main-color);
+    padding-left: 5px;
+}
+#About .container .part2 p{
+    line-height: 25px;
+}
+#About .container .part2 hr{
+    border-style: dashed;
+    color: azure;
+}
+#About .container .part2 .info{
+    display: flex;
+    flex-wrap: wrap;
+}
+#About .container .part2 .info .columns{
+    width: 50%;
+}
+#About .container .part2 .info .columns .item{
+    display: flex;
+}
+#About .container .part2 .info .columns:not(:last-child ,:nth-of-type(5))
+{
+    margin-bottom: 10px;
+}
+#About .container .part2 .but1 {
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+    width: 140px;
+    height: 45px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: var(--main-color);
+    margin-right: 5px;
+    transition-duration: 0.8s;
+    cursor: pointer;
+}
+#About .container .part2 .but2 {
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+    width: 110px;
+    height: 45px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: var(--main-color);
+    transition-duration: 0.8s;
+    cursor: pointer;
+}
+#About .container .part2 button:hover{
+    background-color: var(--main-color);
+    color: azure;
+
+}
+
+/* End section about  */
+
+#Services .content{
+    display: flex;
+    flex-wrap: wrap;
+}
+#Services .content .card {
+    flex-basis: 25%;
+    text-align: center;
+}
+#Services .content .card .item{
+    border: 1px solid var(--main-color);
+    border-radius: 12px;
+    margin-inline: 10px;
+    padding: 15px 15px;
+    transition-duration: 0.5s;
+}
+#Services .content .card .item:hover{
+   transform: translateY(-20px);
+    box-shadow: 
+    rgba(255, 48, 92, 0.4) 0px 5px ,
+    rgba(255, 48, 92, 0.3) 0px 10px ,
+    rgba(255, 48, 92, 0.2) 0px 15px ,
+    rgba(255, 48, 92, 0.1) 0px 20px ,
+    rgba(255, 48, 92, 0.05) 0px 25px ,
+    rgba(100,0,0,0.4) -5px 5px 40px
+     ;
+}
+#Services .content .card .item i{
+    font-size: 30px;
+    color: var(--main-color);
+}
+#Services .content .card .item h4{
+    margin-block: 10px;
+}
+/* End section our services */
+
+#Portfolio .content{
+    display: flex;
+    flex-wrap: wrap;
+}
+#Portfolio .content .card{
+    width: calc(100%/3);
+    margin-bottom: 10px;
+}
+#Portfolio .content .card .item{
+        margin: 7px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 15px;
+}
+#Portfolio .content .card .item::before{
+    content: "";
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    width: 0%;
+    height: 0%;
+    position: absolute;
+    border-radius: 100%;
+    background-color: rgba(255, 48, 91, 0.5);
+    transition-duration: 1s;
+}
+#Portfolio .content .card .item:hover::before{
+    width: 100%;
+    height: 100%;
+    border-radius: 0%;
+}
+#Portfolio .content .card .item h2 ,
+#Portfolio .content .card .item a{
+    position: absolute;
+ 
+}
+#Portfolio .content .card .item h2{
+    top: 20px;
+    left: 100%; 
+    background-color: var(--main-color);
+    padding: 10px 10px ;
+    color: azure;
+    width: 100%;
+    text-align: center;
+  
+}
+#Portfolio .content .card .item:hover h2{
+     left: 0%;  
+    transition-duration: 1.3s;
+    transition-delay: 1s;
+}
+#Portfolio .content .card .item a{
+    width: 37%;
+    bottom: -70px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: azure;
+    color: var(--main-color);
+    padding: 10px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    
+}
+#Portfolio .content .card .item:hover a{
+     bottom: 15px;
+     transition-duration: 1.3s;
+     transition-delay: 1s;
+}
+#Portfolio .content .card .item img{
+    height: auto;
+    display: block;
+}
+/* End portfolio */
+#Blog .container{
+    display: flex;
+}
+#Blog .container .columns{
+    flex-basis: calc(100%/3);
+}
+#Blog .container .columns .head{
+     height: 200px;
+}
+#Blog .container .columns iframe{
+     width: 100%;
+     height: 100%;
+}
+#Blog .container .columns img{
+    height: 100%;
+    display: block;
+}
+#Blog .container .columns .item{
+    border: 2px solid var(--main-color);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 360px;
+    margin: auto;
+}
+#Blog .container .columns .item .body{
+    padding: 25px 20px;
+}
+#Blog .container .columns .item .body h5{
+    font-size: 15px;
+}
+#Blog .container .columns .item .body p{
+   line-height: 30px;
+}
+#Blog .container .columns .item .body > *:not(:last-child)
+{
+    margin-bottom: 15px;
+}
+#Blog .container .columns .item .body button{
+    padding: 10px 15px;
+    background-color: transparent;
+    border-radius: 10px;
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+#Blog .container .columns .item .body button:hover{
+     background-color: var(--main-color);
+    color: azure;
+}
+#Blog .container .columns .item .body button i{
+   transition-duration: 0.5s;
+}
+#Blog .container .columns .item button:hover i{
+    background-color: var(--main-color);
+    color: azure;
+    margin-left: 12px;  
+}
+/* End our blog */
+
+#Contact_Us .container form{
+    display: flex;
+    flex-wrap: wrap;
+}
+#Contact_Us .container .columns1{
+    flex-basis: 90%;
+    margin:auto;
+    text-align: center ;
+}
+#Contact_Us .container .columns1 input{
+    width: 45%;
+    color: azure;
+    padding: 0px 10px;
+    height: 40px;
+    border: 1px solid var(--main-color); 
+    border-radius: 10px;
+    margin-block: 8px;
+     background-color: transparent;
+     outline-style: none;
+}
+#Contact_Us .container input::placeholder ,
+#Contact_Us .container textarea::placeholder{
+    color: azure;
+}
+#Contact_Us .container .columns2{
+    flex-basis: 90%;
+    margin: auto;
+    text-align: center;
+} 
+#Contact_Us .container .columns2 input ,
+#Contact_Us .container .columns2 textarea{
+    width: 90%;
+    padding: 10px;
+    height: 40px;
+    border: 1px solid var(--main-color); 
+    border-radius: 10px;
+    margin-block: 8px;
+    background-color: transparent;
+    color: azure;
+    outline-style: none;
+}
+#Contact_Us .container .columns2 #Message{
+    height: 200px;
+    resize: none;
+}
+#Contact_Us .container form .but{
+    text-align: start;
+    width: 90%;
+    margin: auto;
+}
+#Contact_Us .container form button{
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+    width: 160px;
+    height: 45px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: var(--main-color);
+    transition-duration: 0.8s;
+    font-size: 15px;
+    cursor: pointer; 
+      margin-left: 5%;
+}
+#Contact_Us .container form button:hover{
+    background-color: var(--main-color);
+    color: azure;
+}
+
+footer{
+    background-color: #3E3E3E;
+    padding-block: 20px;
+}
+footer p{
+    color: azure;
+    text-align: center;
+    font-size: 15px;
+}
+

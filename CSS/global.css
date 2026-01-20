@@ -1,0 +1,64 @@
+body{
+    font-family: "Roboto", sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --main-color : #FF305B ; 
+    --bg-color : #151515 ;
+    --p-color :#c1c1c1 ;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-family: "Exo 2", sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+div.container{
+    margin: auto;
+    width: 80%;
+}
+img{
+    width: 100%; 
+}
+section {
+    padding: 50px 30px;
+    background-color: var(--bg-color);
+    color: azure;
+}
+P{
+    color: var(--p-color);
+}
+.title{
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 50px;
+}
+.title h2{
+    font-size: 35px;
+}
+.title .lines{
+      width: 100%;
+      margin: 10px auto 0px;
+}
+.title .lines span{
+    width: 55%;
+    margin: auto;
+    display: block;
+    height: 1px;
+    background-color: var(--main-color);
+}
+.title .lines span:nth-of-type(2){
+    width: 85%;
+    margin-block: 5px;
+}
