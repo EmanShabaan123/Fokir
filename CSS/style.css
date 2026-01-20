@@ -383,7 +383,7 @@ header a.shape::before{
 }
 #Portfolio .content .card .item a{
     text-align: center;
-    width: 35%;
+    width: 40%;
     bottom: -70px;
     left: 50%;
     transform: translate(-50%);
