@@ -391,7 +391,7 @@ header a.shape::before{
     padding: 10px 10px;
     border-radius: 10px;
     text-decoration: none;
-    
+    font-size: 17px;
 }
 #Portfolio .content .card .item:hover a{
      bottom: 15px;
@@ -457,7 +457,6 @@ header a.shape::before{
    transition-duration: 0.5s;
 }
 #Blog .container .columns .item button:hover i{
-    background-color: var(--main-color);
     color: azure;
     margin-left: 12px;  
 }
