@@ -80,9 +80,9 @@ header::before{
 
 }
 header .content{
-    text-align: center;
     color: azure;
     position: relative;
+    text-align: center;
 }
 header .content h5{
     font-size: clamp(1.5rem , 2.5vw , 3rem);
@@ -259,6 +259,9 @@ header a.shape::before{
 #About .container .part2 .info .columns .item{
     display: flex;
 }
+#About .container .part2 .info .columns .item h4{
+      margin-right: 5px;
+}
 #About .container .part2 .info .columns:not(:last-child ,:nth-of-type(5))
 {
     margin-bottom: 10px;
@@ -382,17 +385,18 @@ header a.shape::before{
     transition-delay: 1s;
 }
 #Portfolio .content .card .item a{
+    display: block;
     text-align: center;
-    width: 42%;
+    width: fit-content;
     bottom: -70px;
     left: 50%;
     transform: translate(-50%);
     background-color: azure;
     color: var(--main-color);
-    padding: 10px 10px;
+    padding: 10px 14px;
     border-radius: 10px;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 15px;
 }
 #Portfolio .content .card .item:hover a{
      bottom: 15px;
@@ -406,9 +410,10 @@ header a.shape::before{
 /* End portfolio */
 #Blog .container{
     display: flex;
+    flex-basis: calc(100%/3);
 }
 #Blog .container .columns{
-    flex-basis: calc(100%/3);
+    margin: auto;
 }
 #Blog .container .columns .head{
      height: 200px;
@@ -425,7 +430,7 @@ header a.shape::before{
     border: 2px solid var(--main-color);
     border-radius: 10px;
     overflow: hidden;
-    width: 360px;
+    width: 90%;
     margin: auto;
 }
 #Blog .container .columns .item .body{
@@ -435,7 +440,8 @@ header a.shape::before{
     font-size: 15px;
 }
 #Blog .container .columns .item .body p{
-   line-height: 30px;
+   font-size: 20px;
+   line-height: 35px;
 }
 #Blog .container .columns .item .body > *:not(:last-child)
 {
@@ -468,35 +474,35 @@ header a.shape::before{
     flex-wrap: wrap;
 }
 #Contact_Us .container .columns1{
-    flex-basis: 90%;
-    margin:auto;
+    display: flex;
+    flex-basis: 80%;
+    margin: auto;
     text-align: center ;
+    padding: 10px 28px;
+    justify-content: space-evenly;
 }
 #Contact_Us .container .columns1 input{
-    width: 45%;
+    width: 47%;
     color: azure;
-    padding: 0px 10px;
-    height: 40px;
+    padding: 12px 10px;
     border: 1px solid var(--main-color); 
     border-radius: 10px;
-    margin-block: 8px;
-     background-color: transparent;
-     outline-style: none;
+    background-color: transparent;
+    outline-style: none;
 }
 #Contact_Us .container input::placeholder ,
 #Contact_Us .container textarea::placeholder{
     color: azure;
 }
 #Contact_Us .container .columns2{
-    flex-basis: 90%;
+    flex-basis: 80%;
     margin: auto;
     text-align: center;
 } 
 #Contact_Us .container .columns2 input ,
 #Contact_Us .container .columns2 textarea{
     width: 90%;
-    padding: 10px;
-    height: 40px;
+    padding: 12px 10px;
     border: 1px solid var(--main-color); 
     border-radius: 10px;
     margin-block: 8px;
@@ -510,7 +516,7 @@ header a.shape::before{
 }
 #Contact_Us .container form .but{
     text-align: start;
-    width: 90%;
+    width: 80%;
     margin: auto;
 }
 #Contact_Us .container form button{
@@ -524,7 +530,7 @@ header a.shape::before{
     transition-duration: 0.8s;
     font-size: 15px;
     cursor: pointer; 
-      margin-left: 5%;
+    margin-left: 5%;
 }
 #Contact_Us .container form button:hover{
     background-color: var(--main-color);

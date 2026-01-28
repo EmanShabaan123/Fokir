@@ -102,10 +102,13 @@ header .content p{
     font-size: 15px;
         }
     #Portfolio .content .card .item a{
-    font-size: 10px;
-    width: 45%;
-    text-align: center;
-        }
+    display: block;
+    width: fit-content;
+    bottom: -70px;
+    left: 50%;
+    padding: 7px 5px;
+    font-size: 12px;
+}
     #Blog .container {
     flex-wrap: wrap;
         }
@@ -131,13 +134,16 @@ header .content p{
        }
 
     #Contact_Us .container .columns1{
+    flex-wrap: wrap;
     flex-basis: 250px;
+    padding: 0px;
+    justify-content: center;
        }
     #Contact_Us .container .columns1 input{
     width: 100%;
-    padding: 10px;
-    height: 30px;
+    padding: 8px 10px;
     border-radius: 5px;
+    margin-block: 8px;
        }
     #Contact_Us .container .columns2{
     flex-basis: 250px;
@@ -174,6 +180,10 @@ header .content p{
     height: 33px;
  
        }
+    #Portfolio .content .card .item a{
+    padding: 5px 3px;
+    font-size: 14px;
+}
     #Contact_Us .container .columns1{
     flex-basis: 280px;
        }
@@ -187,6 +197,7 @@ header .content p{
     font-size: 13px;
        }
 }
+
 @media (min-width: 577px) and (max-width: 1300px) {
 
 
@@ -217,10 +228,9 @@ header .content p{
     font-size: 15px;
         }
     #Portfolio .content .card .item a{
-    font-size: 7px;
-    width: 50%;
-    text-align: center;
-        }
+    padding: 6px 3px;
+    font-size: 12px;
+}
     #Blog .container .columns {
       flex-basis: 232px; 
       margin: auto;
@@ -248,8 +258,18 @@ header .content p{
     font-size: 12px;
         }
 }
-
 @media (min-width: 769px) and (max-width: 1300px) {
+     nav .container .links .box{
+           display: block;
+           width: 40px;
+           height: 40px;
+           display: flex;
+        }
+         nav .container .links .box span{
+            width: 80%;
+            margin: 1px auto;
+            height: 2px;
+         }
     nav .container .links ul
      {
         top: 120px;
@@ -268,18 +288,19 @@ header .content p{
             flex-basis: 50%;
          }
            #About .container .part1 .frame{
-            width: 240px;
+            width: 270px;
+            margin-left: 0%;
          }
     #About .container .part2 h3{
-    font-size: 20px;
+    font-size: 25px;
     padding-left: 5px;
    }
    #About .container .part2 p{
     line-height: 15px;
-    font-size: 10px;
+    font-size: 14px;
    }
    #About .container .part2 h4{
-    font-size: 10px;
+    font-size: 12px;
    }
    #About .container .part2 .info .columns:not(:last-child ,:nth-of-type(5)){
      margin-bottom: 5px;
@@ -297,21 +318,21 @@ header .content p{
          #Portfolio .content .card .item h2{
                 font-size: 20px;
             }
-          #Portfolio .content .card .item a{
-           font-size: 8px;
-             width: 45%;
+     #Portfolio .content .card .item a{
+    padding: 8px 8px;
+    font-size: 14px;
+    border-radius: 10px;
 }
  #Blog .container .columns {
-      flex-basis: 235px; 
-      margin: auto;
+      flex-basis: 280px; 
 }
  #Blog .container .columns .item{
      width: 100%;
-     margin-left: 15px;
 }
 
     #Contact_Us .container .columns1{
     flex-basis: 480px;
+    justify-content: space-between;
 }
 #Contact_Us .container .columns1 input{
     width: 49%;
@@ -333,10 +354,13 @@ footer p{
 }
 
 @media (min-width: 992px) and (max-width: 1300px) {
-               #About .container .part1 .frame .image .layout ul li a{
-    width: 35px;
-    height: 35px;
- 
+       nav .container .links .box{
+           width: 45px;
+           height: 45px;
+        }
+        #About .container .part1 .frame .image .layout ul li a{
+           width: 35px;
+           height: 35px;
 }
       #About .container .part1 .frame{
             width: 280px;
@@ -373,21 +397,33 @@ footer p{
             #Portfolio .content .card .item h2{
                 font-size: 20px;
             }
-          #Portfolio .content .card .item a{
-           font-size: 10px;
-             width: 45%;
+      #Portfolio .content .card .item a{
+    padding: 8px 8px;
+    font-size: 12px;
 }
-#Blog .container .columns {
-      flex-basis: calc(100%/3); 
-      margin: 0px;
+#Blog .container{
+    display: flex;
+    width: 90%;
+    
 }
- #Blog .container .columns .item{
-     width: 95%;
-     margin: 0px;
+#Blog .container .columns{
+    flex-basis: calc(100%/3);
+    margin: auto;
 }
-#Blog .container .columns:last-child{
-      margin: 0px;
+#Blog .container .columns .item{
+    width: 95%;
 }
+#Blog .container .columns .item .body h5{
+    font-size: 15px;
+}
+#Blog .container .columns .item .body p{
+   line-height: 25px;
+   font-size: 14px;
+}
+     #Blog .container .columns:not(:last-child) {
+        margin-bottom: 0px;
+    }
+       
     #Contact_Us .container .columns1{
     flex-basis: 765px;
 }
